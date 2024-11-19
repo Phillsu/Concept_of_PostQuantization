@@ -1,38 +1,40 @@
-### Symmetric Quantization Formula
+# Symmetric and Asymmetric Quantization Formulas
 
-1. **Quantization**:  
-   \[
-   Q(x) = \text{round}\left(\frac{x}{\alpha}\right)
-   \]  
-   where \( \alpha \) is the scale factor, typically:  
-   \[
-   \alpha = \frac{\text{max}(|x|)}{2^{b-1} - 1}
-   \]
+## Symmetric Quantization
 
-2. **Dequantization**:  
-   \[
-   x' = Q(x) \cdot \alpha
-   \]
+### Quantization
+\[
+Q(x) = \text{round}\left(\frac{x}{\alpha}\right)
+\]  
+Where \( \alpha \) (scale factor) is calculated as:  
+\[
+\alpha = \frac{\text{max}(|x|)}{2^{b-1} - 1}
+\]
+
+### Dequantization
+\[
+x' = Q(x) \cdot \alpha
+\]
 
 ---
 
-### Asymmetric Quantization Formula
+## Asymmetric Quantization
 
-1. **Quantization**:  
-   \[
-   Q(x) = \text{round}\left(\frac{x}{\alpha}\right) + Z
-   \]  
-   where:
-   - \( \alpha \): scale factor, typically:  
-     \[
-     \alpha = \frac{\text{max}(x) - \text{min}(x)}{2^b - 1}
-     \]
-   - \( Z \): zero-point, typically:  
-     \[
-     Z = \text{round}\left(-\frac{\text{min}(x)}{\alpha}\right)
-     \]
+### Quantization
+\[
+Q(x) = \text{round}\left(\frac{x}{\alpha}\right) + Z
+\]  
+Where:
+- \( \alpha \) (scale factor):  
+  \[
+  \alpha = \frac{\text{max}(x) - \text{min}(x)}{2^b - 1}
+  \]
+- \( Z \) (zero-point):  
+  \[
+  Z = \text{round}\left(-\frac{\text{min}(x)}{\alpha}\right)
+  \]
 
-2. **Dequantization**:  
-   \[
-   x' = (Q(x) - Z) \cdot \alpha
-   \]
+### Dequantization
+\[
+x' = (Q(x) - Z) \cdot \alpha
+\]
