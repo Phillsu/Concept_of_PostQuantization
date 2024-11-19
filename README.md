@@ -40,5 +40,6 @@ Where $\alpha$ (scale factor) is calculated as:
 $$
 x' = (Q(x) - Z) \cdot \alpha
 $$
-![img](https://github.com/Phillsu/Concept_of_PostQuantization/blob/main/symmetric.png)
 
+![image](https://github.com/Phillsu/Concept_of_PostQuantization/blob/main/asymmetric.png)
+---
