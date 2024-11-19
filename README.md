@@ -18,6 +18,7 @@ $$
 x' = Q(x) \cdot \alpha
 $$
 
+![image](https://github.com/Phillsu/Concept_of_PostQuantization/blob/main/symmetric.png)
 ---
 
 ## Asymmetric Quantization
@@ -39,3 +40,5 @@ Where $\alpha$ (scale factor) is calculated as:
 $$
 x' = (Q(x) - Z) \cdot \alpha
 $$
+![img](https://github.com/Phillsu/Concept_of_PostQuantization/blob/main/symmetric.png)
+
